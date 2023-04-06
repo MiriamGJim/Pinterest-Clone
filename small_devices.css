@@ -1,0 +1,44 @@
+.navbar_pinterest_buttons_container{
+    width: 10rem;
+    align-content: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+}
+.navbar_pinterest_button {
+    margin-inline: 0.8rem;
+    padding-inline-start: 0.7rem;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.button-hoy button{
+    display: none;
+}
+.button-crear button{
+    display: none;
+}
+.Inicio {
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    align-content: center;
+    margin:0;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    padding-left: 10px;
+}
+.init {
+    color: black;
+    padding-left: 10px;
+}
+.drop {
+    padding-left: 10px;
+}

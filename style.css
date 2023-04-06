@@ -2,7 +2,8 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-size: 16px;
+    font-size: 16px;/* 1 rem */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 :root {
@@ -19,17 +20,141 @@
     --card_large: 45;
     /* Factor de crecimiento para tarjetas grandes: 26*0.625rem */
 }
-
 main {
     height: 100vh;
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: #ffffff;
+}
+#navbar-pinterest{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 5rem;
+    background-color: #ffffff;
+    display: flex;
 }
 
-.pin_container {
-    margin: 0;
+.navbar_pinterest_buttons_container {
+  
+    background-color: #ffffff;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.navbar_pinterest_button {
+    margin-inline: 0.8rem;
+    padding-inline-start: 0.7rem;
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar_pinterest_buttons_container img {
+    height: 1.6rem;
+    width: 1.6rem;
+}
+.Inicio {
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    align-content: center;
+    margin-inline: 0.5rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.init {
+    background-color: black;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5rem;
+    
+
+}
+.navbar_pinterest_buttons_container svg {
+    height: 0.6rem;
+    width: 0.6rem;
+}
+
+.navbar_input_search_container {
+    
+    flex-grow: 4;
+    min-width: 3rem;
+    background-color: white;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    
+}
+.navbar_input_search {
+    margin-inline: 0.8rem;
+    padding-inline-start: 0.8rem;
+    height: 3rem;
+    width: 100%;
+    background-color: #e1e1e1;
+    border-radius: 1.5rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.navbar_input_search>svg {
+    height: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.navbar_input_search>input {
+    height: 2rem;
+    flex-grow: 3;
+    margin-inline-end: 1rem;
+    margin-inline-start: 0.8rem;
+    background-color: transparent;
+    border-style: none;
+}
+.navbar_input_search>input:focus-visible {
+    outline: none;
+}
+.navbar_user_buttons_container{
+    width: 15rem;
+    background-color: #ffffff;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar_user_buttons {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-inline: 0.5rem;
+    background: transparent;
+    border: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#notificaciones, #mensajes, #Profile, #drop {
+    margin-bottom: auto;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    fill: #5f5f5f;
+}
+#pin_container {
+    margin-top: 5rem;
     padding: 0;
-    width: 80%;
+    width: 100%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -39,16 +164,125 @@ main {
     grid-auto-rows: var(--row_increment);
     justify-content: center;
 
-    background-color: black;
+    background-color: #ffffff;
+}
+
+#pin_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .card {
+    position: relative;
     padding: 0;
     margin: 15px 10px;
     border-radius: var(--card_border_radius);
-    background-color: red;
+    background-color: whitesmoke;
+}
+.card_contenido{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border-radius: var(--card_border_radius);
+}
+.card_boton_hover{
+    width: 100%;
+    height: 100%;
+    padding-top: 1.25rem;
+    padding-right: 0.938rem;
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: start;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.452);
+    color: white;
+    cursor: zoom-in;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: var(--card_border_radius);
+}
+.card_boton_hover:hover {
+    opacity: 1;
+}
+.boton_guardar {
+    background: #e60023;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 15px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
 }
 
+.boton_guardar_donde {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    padding-right: 50px;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.chevron {
+    display: flex;
+    flex-direction: row;
+    fill: #FFFFFF;
+    height: 0.7rem;
+    width: 0.7rem;
+}
+.botones {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: end;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 6px 14px;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+}
+.Icono {
+    display: flex;
+    fill: black;
+    padding: 0.5rem;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.824);
+}
+#guardar {
+    padding: 0px;
+}
 .card_small {
     grid-row-end: span var(--card_small);
 }
@@ -59,4 +293,34 @@ main {
 
 .card_large {
     grid-row-end: span var(--card_large);
+}
+
+.btn{
+    height: 56px;
+    width: 56px;
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    right: 30px;
+    bottom: 20px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, 0.578) 0 6px 20px;
+    cursor: pointer;
+    
+    text-decoration: none;
+    text-align: center;
+    background: white;
+   }
+
+.btn svg{
+    display: block;
+    margin: 16px;
+    border-radius: 50%;
+}   
+
+
+
+.button-35:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
